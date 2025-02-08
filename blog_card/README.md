@@ -21,7 +21,7 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/jull20/frontmentor.git)
+- Solution URL: [Add solution URL here](https://github.com/jull20/frontmentor/tree/d3cb75186d918fa4de57a05ef7aac92de1a89c9d/blog_card)
 
 ## My process
 
