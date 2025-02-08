@@ -13,7 +13,7 @@
 
 ### QR code component
 
-- Solution URL: [qr_code](https://github.com/jull20/qr_code.git)
+- Solution URL: [qr_code](https://github.com/jull20/frontmentor/tree/848f6681aaa3af8348e67883c9128d48571491da/qr)
 
 ![alt text](<screenshots/qr_code.png>)
 
