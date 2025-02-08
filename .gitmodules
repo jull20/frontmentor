@@ -1,0 +1,6 @@
+[submodule "qr_code"]
+	path = qr_code
+	url = https://github.com/jull20/qr_code.git
+[submodule "show.github.io"]
+	path = show.github.io
+	url = https://github.com/jull20/show.github.io
