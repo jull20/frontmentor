@@ -9,58 +9,175 @@
   <title>Frontend Mentor | Product preview card component</title>
 
   <style>
+    @font-face {
+      font-family: "Montserrat";
+      src: url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
+    }
+    @font-face {
+      font-family: "Fraunces";
+      src: url(./assets/fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format("truetype");
+    }
+  /* ///////////MOBILE///////////// */
     @media screen and (max-width: 375px){
       main{
-        
+        width: 350px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        flex-direction: column;   
       }
-      .image{
-        background-image: url(images/image-product-mobile.jpg);
-        max-inline-size: 100%;
-        block-size: auto;
-        /* width: 100px;
-        height: 100px; */
+      .product_img{
+        background-image: url(assets/images/image-product-desktop.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 342px;
+        border-radius: 8px 8px 0 0;
+        background-position: 0 -30px;
+      }
+      .content{
+        display: flex;
+        flex-direction: column;
+        gap: 24px 0;
       }
     }
-
-    @media screen and (min-width: 376px){
-      .image{
-        background: url(images/image-product-desktop.jpg);
-      }
+  /* ///////////TABLET///////////// */
+  @media screen and (min-width: 376px){
+    main{
+      width: 600px;
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      flex-direction: row;   
     }
+    .product_img{
+      background-image: url(assets/images/image-product-desktop.jpg);
+      background-size: cover;
+      width: 50%;
+      border-radius: 8px 0 0 8px;
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 32px 0;
+    }
+  }
 
     body{
+      height: 100vh;
+      width: 100vw;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      width: 100vw;
       margin: 0;
       background-color: hsl(30, 38%, 92%);
+      font-size: 16px;
     }
     main{
-
+      box-sizing: border-box;
+      background-color: hsl(0, 0%, 100%);
+      display: flex;
+    }
+    .content{
+      padding: 2em;
+      box-sizing: border-box;
+    }
+    .text{
+      display: flex;
+      flex-direction: column;
+      gap: 24px 0;
+    }
+    .content .text #product_type{
+      font-family: "Montserrat";
+      font-size: .75em;
+      letter-spacing: .4em;
+      line-height: 120%;
+      color: hsl(228, 12%, 48%);
+      margin: 0;
+    }
+    .content .text #product_name{
+      font-family: "Fraunces";
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 100%;
+      color: hsl(212, 21%, 14%);
+      margin: 0;
+    }
+    .content .text #description{
+      font-family: "Montserrat";
+      font-size: .875em;
+      letter-spacing: 0;
+      line-height: 160%;
+      color: hsl(228, 12%, 48%);
+      margin: 0;
+    }
+    .content .price{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0 16px;
+    }
+    .content .price #new{
+      font-family: "Fraunces";
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 100%;
+      color: hsl(158, 36%, 37%);
+    }
+    .content .price #old{
+      font-family: "Montserrat";
+      font-size: .9em;
+      letter-spacing: 0;
+      line-height: 120%;
+      color: hsl(228, 12%, 48%);
+      text-decoration: line-through;
+    }
+    button{
+      padding: 1em 2em 1em 2em;
+      background-color: hsl(158, 36%, 37%);
+      color: hsl(0, 0%, 100%);
+      border: none;
+      border-radius: .5em;
+      font-family: "Montserrat";
+      font-size: .875em;
+      font-weight: bold;
+      line-height: 110%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0 8px;
+      transition: background-color 0.4s;
+    }
+    button:hover{
+      background-color: hsl(158, 42%, 18%);
     }
 
   </style>
 </head>
 <body>
   <main>
-    <div class="image"></div>
-    <div class="text_block">
-
+    <div class="product_img"></div>
+    <div class="content">
+      <div class="text">
+        <span id="product_type">PERFUME</span>
+        <h1 id="product_name">Gabrielle Essence Eau De Parfum</h1>
+        <p id="description">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+      </div>
+      <div class="price">
+        <span id="new">$149.99</span>
+        <span id="old">$169.99</span>
+      </div>
+      <button>
+        <img src="assets/images/icon-cart.svg" alt="">
+        Add to Cart
+      </button>
     </div>
   </main>
 
-  <!-- Perfume
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart -->
   
 </body>
 </html>
