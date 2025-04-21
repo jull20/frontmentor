@@ -25,7 +25,7 @@
 
 .text-preset-1{
     font-family: "Poppins Bold";
-    font-size: 36px;
+    /* font-size: 36px; */
     font-weight: 600;
     color: var(--grey-500);
     line-height: 140%;
@@ -33,7 +33,7 @@
 }
 .text-preset-2{
     font-family: "Poppins Extra Light";
-    font-size: 36px;
+    /* font-size: 36px; */
     font-weight: 200;
     color: var(--grey-500);
     line-height: 140%;
@@ -53,7 +53,7 @@
     font-weight: 400;
     color: var(--grey-500);
     line-height: 140%;
-    letter-spacing: 0;
+    letter-spacing: 0.1px;
 }
 .text-preset-5{
     font-family: "Poppins Regular";
@@ -85,6 +85,9 @@ h1, h2, h3, p{
 }
 
 @media screen and (max-width: 375px){
+    .text-preset-1, .text-preset-2{
+        font-size: 24px;
+    }
     .content_wrapper{
         flex-direction: column;
         gap: 32px 0;
@@ -92,10 +95,16 @@ h1, h2, h3, p{
     .card_wrapper{
         flex-direction: column;
         gap: 32px 0;
+    }
+    body{
+        margin: 56px 30px 0 30px;
     }
 }
 
 @media screen and (min-width: 376px) and (max-width: 768px){
+    .text-preset-1, .text-preset-2{
+        font-size: 36px;
+    }
     .content_wrapper{
         flex-direction: column;
         gap: 32px 0;
@@ -103,10 +112,20 @@ h1, h2, h3, p{
     .card_wrapper{
         flex-direction: row;
         gap: 0 32px;
+        width: 100%;
+    }
+    .card{
+        width: calc(100%/2);
+    }
+    body{
+        margin: 80px 0 0 0;
     }
 }
 
 @media screen and (min-width: 769px){
+    .text-preset-1, .text-preset-2{
+        font-size: 36px;
+    }
     .content_wrapper{
         flex-direction: row;
         gap: 0 32px;
@@ -115,17 +134,22 @@ h1, h2, h3, p{
     .card_wrapper{
         flex-direction: column;
         gap: 32px 0;
+        max-width: 350px;
+        width: 33.3%;
+    }
+
+    body{
+        margin: 102px 0 0 0;
     }
 }
 
 body{
     height: 100vh;
     width: 100vw;
-    margin: 0;
     background-color: var(--bg-white);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 74px 0;
 }
@@ -136,6 +160,10 @@ body{
     justify-content: start;
     align-items: center;
     gap: 16px 0;
+    max-width: 540px;
+    text-align: center;
+    margin: 0 29px 0 29px;
+
 }
 
 .text{
@@ -148,23 +176,29 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    margin: 0 50px 0 50px;
+    min-width: 80%;
+    box-sizing: border-box;
 }
 
 .card_wrapper{
+    height: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    
+
 }
 
 .card{
     display: flex;
     flex-direction: column;
     align-items: end;
+    
     gap: 32px;
     box-sizing: border-box;
-    width: 350px;
+    
     height: 250px;
     box-shadow: 0 15px 30px -11px var(--shadow);
     background-color: var(--white);
