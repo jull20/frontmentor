@@ -1,0 +1,219 @@
+@font-face {
+    font-family: "Barlow";
+    src: url(assets/fonts/BarlowSemiCondensed-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Barlow";
+    src: url(assets/fonts/BarlowSemiCondensed-Medium.ttf);
+    font-weight: 500;
+}
+
+:root{
+    --black:     hsl(0, 0%, 7%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --white:     hsl(0, 0%, 100%);
+    --grey-100:  hsl(214, 17%, 92%);
+    --grey-200:  hsl(0, 0%, 81%);
+    --grey-400:  hsl(224, 10%, 45%);
+    --grey-500:  hsl(217, 19%, 35%);
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300:hsl(264, 82%, 80%);
+    --purple-500:hsl(263, 55%, 52%);
+    --shadow:    hsla(217, 19%, 35%, 0.247);
+
+    --text-preset-1: 600 20px/120% "Barlow";
+    --text-preset-2: 500 13px/110% "Barlow";
+    --text-preset-3: 500 13px/140% "Barlow";
+    --text-preset-4: 500 11px/110% "Barlow";
+
+    --text-light: white;
+    --text-dark:  black;
+    --avatar-border: rgba(0, 0, 0, 0);
+}
+
+.title{
+    font: var(--text-preset-1);
+    color: var(--text-light);
+    z-index: 2;
+}
+.name{
+    font: var(--text-preset-2);
+    color: var(--text-light);
+}
+.quotation{
+    font: var(--text-preset-3);
+    color: var(--text-dark);
+}
+.status{
+    font: var(--text-preset-4);
+    color: var(--text-dark);
+}
+
+.purple{
+    background-color: var(--purple-500);
+    --text-light: var(--white);
+    --text-dark:  var(--purple-50);
+    --avatar-border: rgba(167, 117, 241, 1);
+}
+.grey{
+    background-color: var(--grey-500);
+    --text-light: var(--white);
+    --text-dark:  var(--grey-100);
+}
+.white{
+    background-color: var(--white);
+    --text-light: var(--grey-500);
+    --text-dark:  var(--grey-400);
+}
+.dark_blue{
+    background-color: var(--dark-blue);
+    --text-light: var(--grey-200);
+    --text-dark:  var(--grey-100);
+    --avatar-border: var(--purple-500);
+}
+
+
+@media screen and (max-width: 375px){
+    
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px){
+    .grid{
+        grid-template-columns: repeat(2, 47.53%);
+        grid-template-rows:  23.34% 21.26% 23.34% 23.77%;
+        top: 6.13%;
+        left: 7.81%;
+        width: 84.24%;
+        height: 85.51%;
+        row-gap: 32px;
+        column-gap: 32px;
+    }
+    .child.purple{
+        grid-column: 1/3;
+        grid-row:    1/2;
+    }
+    .child.grey{
+        grid-column: 1/2;
+        grid-row:    2/3;
+    }
+    .child.short.white{
+        grid-column: 2/3;
+        grid-row:    2/3;
+    }
+    .child.dark_blue{
+        grid-column: 1/3;
+        grid-row:    3/4;
+    }
+    .child.long.white{
+        grid-column: 1/3;
+        grid-row:    4/5;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .grid{
+        grid-template-columns: repeat(4, 22.89%);
+        grid-template-rows:    49.48% 46.39%;
+        top: 22.25%;
+        left: 11.46%;
+        width: 77.36%;
+        height: 56.56%;
+        row-gap: 24px;
+        column-gap: 32px;
+    }
+    .child.purple{
+        grid-column: 1/3;
+        grid-row:    1/2;
+    }
+    .child.grey{
+        grid-column: 3/4;
+        grid-row:    1/2;
+    }
+    .child.short.white{
+        grid-column: 1/2;
+        grid-row:    2/3;
+    }
+    .child.dark_blue{
+        grid-column: 2/4;
+        grid-row:    2/3;
+    }
+    .child.long.white{
+        grid-column: 4/5;
+        grid-row:    1/3;
+    }
+    .svg{
+        position: absolute;
+        top: 0;
+        left: 376px;
+        z-index: 1;
+    }
+
+}
+
+/* html{
+    width: 100vw;
+    height: 100vh;
+} */
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(246, 245, 246, 1); 
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.grid{
+    position: relative;
+    display: grid;
+    
+
+    /* padding-top: 10px; */
+}
+
+.child{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    gap: 16px;
+    border-radius: 8px;
+    box-shadow: 40px 60px 50px 0 var(--shadow);
+}
+
+.avatar{
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border: 2px solid var(--avatar-border);
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0 16px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px 0;
+}
+
+
+
+
+
+
+
+
+
