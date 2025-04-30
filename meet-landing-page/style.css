@@ -1,0 +1,46 @@
+@font-face{
+    font-family: "Red Hat";
+    src: url(assets/font/RedHatDisplay-Black.ttf);
+    font-weight: 900;
+}
+@font-face{
+    font-family: "Red Hat";
+    src: url(assets/font/RedHatDisplay-Medium.ttf);
+    font-weight: 500;
+}
+
+:root{
+    --white:      #FAFAFA;
+    --blue-300:   #8FE3F9;
+    --blue-600:   #4D96A9;
+    --purple-300: #D9B8FF;
+    --purple-600: #855FB1;
+    --grey-300:   #D1D1DF;
+    --grey-600:   #87879D;
+    --grey-900:   #28283D;
+
+    --text-preset-1: 900 64px/110% "Red Hat";
+    --text-preset-2: 900 40px/110% "Red Hat";
+    --text-preset-3: 900 16px/110% "Red Hat";
+    --text-preset-4: 500 18px/110% "Red Hat";
+    --text-preset-5: 900 16px/150% "Red Hat";
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.logo{
+    
+}
+
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 32px;
+}
+
